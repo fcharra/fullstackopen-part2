@@ -12,11 +12,30 @@ const Content = ({parts}) => {
   )
 }
 
+const Total = ({parts}) => {
+  // Extracting the count of exercises in a new array,
+  // and calculating the sum
+  // (acc = 0 to avoid error in case of empty parts array)
+  const total = parts
+    .map( part => part.exercises )
+    .reduce( 
+      (acc, curr) => acc + curr,
+      0
+    )
+  
+  return (
+    <p>
+      <strong>total of {total} exercises</strong>
+    </p>
+  )
+}
+
 const Course = ({course}) => {
   return (
     <>
       <Header name={course.name} />
       <Content parts={course.parts} />
+      <Total parts={course.parts} />
     </>
   )
 }
