@@ -1,4 +1,4 @@
-import Courses from "./components/Course"
+import Course from "./components/Course"
 
 const App = () => {
   const courses = [
@@ -47,7 +47,7 @@ const App = () => {
   ]
 
   return (
-    <Courses courses={courses} />
+    <Course courses={courses} />
   )
 
 }

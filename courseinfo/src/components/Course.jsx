@@ -30,7 +30,7 @@ const Total = ({parts}) => {
   )
 }
 
-const Course = ({course}) => {
+const CoursePanel = ({course}) => {
   return (
     <>
       <Header name={course.name} />
@@ -40,15 +40,15 @@ const Course = ({course}) => {
   )
 }
 
-const Courses = ({courses}) => {
+const Course = ({courses}) => {
   return (
     <>
       <h1>Web development curriculum</h1>
       {courses.map( course => 
-        <Course key={course.id} course={course} />
+        <CoursePanel key={course.id} course={course} />
       )}
     </>
   )
 }
 
-export default Courses
+export default Course
