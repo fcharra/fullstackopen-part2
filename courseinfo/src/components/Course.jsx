@@ -1,6 +1,6 @@
 const Part = ({name, exercises}) => <p>{name} {exercises}</p>
 
-const Header = ({name}) => <h1>{name}</h1>
+const Header = ({name}) => <h2>{name}</h2>
 
 const Content = ({parts}) => {
   return (
@@ -40,4 +40,15 @@ const Course = ({course}) => {
   )
 }
 
-export default Course
+const Courses = ({courses}) => {
+  return (
+    <>
+      <h1>Web development curriculum</h1>
+      {courses.map( course => 
+        <Course key={course.id} course={course} />
+      )}
+    </>
+  )
+}
+
+export default Courses
